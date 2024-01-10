@@ -1,0 +1,14 @@
+package server;
+
+import java.sql.Connection;
+
+public class Dao {
+	Connection con = null;
+
+	public Dao() throws ClassNotFoundException {
+		// TODO Auto-generated constructor stub
+		String driver = "net.ucanaccess.jdbc.UcanaccessDriver";
+		String url = "jdbc:ucanaccess//";
+		Class.forName(driver);
+	}
+}

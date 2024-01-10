@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;RMI_Client/src&apos; to &apos;client&apos;" description="Rename resource &apos;src&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src" name="client" stamp="1702116827097" updateReferences="true"/>&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;RMI_Client&apos;&#x0D;&#x0A;- Original project: &apos;RMI_Client&apos;&#x0D;&#x0A;- Original element: &apos;RMI_Client/src/client&apos;" description="Delete element" element1="/src\/client" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1702117664481" subPackages="false" version="1.0"/>
+</session>

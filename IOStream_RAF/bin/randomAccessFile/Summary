@@ -1,0 +1,48 @@
+`RandomAccessFile` là một lớp trong Java cung cấp cơ chế cho việc đọc và ghi vào một tập tin theo cách ngẫu nhiên. Điều này có nghĩa là bạn có thể di chuyển con trỏ tập tin đến bất kỳ vị trí nào trong tập tin và đọc hoặc ghi dữ liệu từ vị trí đó.
+
+`RandomAccessFile` không giới hạn việc bạn chỉ có thể đọc từ đầu hoặc ghi từ cuối của tập tin như nhiều lớp tập tin khác trong Java. Thay vào đó, nó cung cấp các phương thức như `seek()` để di chuyển con trỏ đến một vị trí cụ thể và các phương thức đọc và ghi để thực hiện hoạt động tại vị trí đó.
+
+Dưới đây là một số điểm chính về `RandomAccessFile`:
+
+1. **Chế độ Mở Tập Tin:**
+   - `"r"`: Chế độ đọc.
+   - `"rw"`: Chế độ đọc và ghi.
+
+2. **Di chuyển Con Trỏ:**
+   - `seek(long pos)`: Di chuyển con trỏ tập tin đến vị trí đã cho.
+
+3. **Đọc và Ghi:**
+   - `read()`: Đọc một byte từ tập tin.
+   - `read(byte[] buffer)`: Đọc dữ liệu vào một mảng byte.
+   - `write(int b)`: Ghi một byte vào tập tin.
+   - `write(byte[] buffer)`: Ghi mảng byte vào tập tin.
+
+Lớp `RandomAccessFile` thích hợp cho các tình huống khi bạn cần đọc hoặc ghi dữ liệu từ một vị trí cụ thể trong tập tin, chẳng hạn như khi làm việc với cơ sở dữ liệu dựa trên tập tin hoặc khi bạn muốn truy cập ngẫu nhiên vào các phần của dữ liệu trong tập tin.
+
+Dưới đây là một số phương thức quan trọng khác của lớp `RandomAccessFile`:
+
+4. **Kích thước Tập Tin:**
+   - `length()`: Trả về kích thước của tập tin.
+
+5. **Vị Trí Con Trỏ:**
+   - `getFilePointer()`: Trả về vị trí hiện tại của con trỏ tập tin.
+
+6. **Đọc và Ghi Kiểu Dữ Liệu Nguyên Thuỷ:**
+   - `readBoolean()`, `writeBoolean(boolean)`: Đọc và ghi giá trị boolean.
+   - `readByte()`, `writeByte(int)`: Đọc và ghi một byte.
+   - `readChar()`, `writeChar(char)`: Đọc và ghi một ký tự.
+   - `readInt()`, `writeInt(int)`: Đọc và ghi một số nguyên 32-bit.
+   - `readLong()`, `writeLong(long)`: Đọc và ghi một số nguyên 64-bit.
+   - `readFloat()`, `writeFloat(float)`: Đọc và ghi một số thực kiểu float.
+   - `readDouble()`, `writeDouble(double)`: Đọc và ghi một số thực kiểu double.
+
+7. **Đọc và Ghi Chuỗi:**
+   - `readUTF()`, `writeUTF(String)`: Đọc và ghi chuỗi sử dụng định dạng UTF-8.
+
+8. **Xử lý Điểm Ngắn (Short):**
+   - `readShort()`, `writeShort(short)`: Đọc và ghi một số nguyên 16-bit.
+
+9. **Đọc và Ghi Từng Ký Tự (Character):**
+   - `read()`, `write(int)`: Đọc và ghi một ký tự.
+
+Lưu ý rằng khi sử dụng `RandomAccessFile`, bạn cần xử lý các ngoại lệ (ví dụ: `IOException`) mà phương thức có thể ném. Điều này là quan trọng khi thực hiện các hoạt động đọc và ghi có thể gặp vấn đề như tập tin không tồn tại, quyền truy cập bị từ chối, và nhiều vấn đề khác liên quan đến I/O.

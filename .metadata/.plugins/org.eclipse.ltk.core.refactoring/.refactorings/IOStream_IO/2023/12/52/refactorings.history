@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;IOStream_IO/src/cau8_copyFile&apos; to &apos;copyFile_Folder&apos;" description="Rename resource &apos;cau8_copyFile&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cau8_copyFile" name="copyFile_Folder" stamp="1703564892310" updateReferences="true"/>
+</session>

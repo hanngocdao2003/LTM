@@ -1,0 +1,85 @@
+Trong Java, Input/Output (I/O) Streams được sử dụng để đọc dữ liệu từ nguồn và ghi dữ liệu vào đích. 
+Java cung cấp một số lớp và giao diện để thực hiện việc này. 
+Các lớp I/O thường được chia thành hai loại chính: Byte Streams (luồng byte) và Character Streams (luồng ký tự).
+
+Dưới đây là một số lớp và phương thức thường được sử dụng khi làm việc với Input/Output Streams trong Java:
+
+### Lớp và Giao diện Quan trọng:
+
+1. **Lớp `InputStream` và `OutputStream`:**
+   - `InputStream` là lớp trừu tượng dùng để đọc dữ liệu dưới dạng byte.
+   - `OutputStream` là lớp trừu tượng dùng để ghi dữ liệu dưới dạng byte.
+
+2. **Lớp `Reader` và `Writer`:**
+   - `Reader` là lớp trừu tượng dùng để đọc dữ liệu dưới dạng ký tự.
+   - `Writer` là lớp trừu tượng dùng để ghi dữ liệu dưới dạng ký tự.
+
+3. **Lớp `FileInputStream` và `FileOutputStream`:**
+   - `FileInputStream` đọc dữ liệu từ một file dưới dạng byte.
+   - `FileOutputStream` ghi dữ liệu vào một file dưới dạng byte.
+
+4. **Lớp `FileReader` và `FileWriter`:**
+   - `FileReader` đọc dữ liệu từ một file dưới dạng ký tự.
+   - `FileWriter` ghi dữ liệu vào một file dưới dạng ký tự.
+
+5. **Lớp `BufferedInputStream` và `BufferedOutputStream`:**
+   - `BufferedInputStream` và `BufferedOutputStream` giúp tăng hiệu suất đọc và ghi bằng cách sử dụng bộ đệm.
+
+6. **Lớp `BufferedReader` và `BufferedWriter`:**
+   - `BufferedReader` và `BufferedWriter` cũng giúp tăng hiệu suất khi đọc và ghi dữ liệu dưới dạng ký tự.
+
+### Phương thức Quan trọng:
+
+1. **`read()` và `write()` method:**
+   - `read()` đọc một byte hoặc một ký tự từ stream.
+   - `write()` ghi một byte hoặc một ký tự vào stream.
+
+2. **`close()` method:**
+   - `close()` đóng stream để giải phóng tài nguyên và đảm bảo rằng dữ liệu đã được ghi hoặc đọc đến cuối.
+
+3. **`flush()` method:**
+   - `flush()` đẩy dữ liệu từ bộ đệm xuống stream, đảm bảo rằng tất cả dữ liệu đã được ghi.
+
+4. **`available()` method:**
+   - `available()` trả về số byte hoặc ký tự có thể đọc từ stream mà không bị chặn.
+
+5. **`mark()` và `reset()` method:**
+   - `mark()` đặt một đánh dấu ở vị trí hiện tại trong stream.
+   - `reset()` quay trở lại vị trí được đánh dấu trước đó.
+
+6. **`skip()` method:**
+   - `skip(n)` bỏ qua n byte hoặc ký tự trong stream.
+
+Lưu ý rằng đối với Java 7 trở lên, bạn nên sử dụng try-with-resources để tự động đóng các resource, 
+giúp giảm rủi ro liên quan đến quản lý tài nguyên.
+
+Lớp PrintWriter trong Java cung cấp nhiều phương thức để ghi dữ liệu vào luồng. Dưới đây là một số phương thức quan trọng:
+
+print() và println():
+
+print(String s): Ghi chuỗi s vào luồng.
+println(String s): Ghi chuỗi s vào luồng và thêm dòng mới.
+printf() và format():
+
+printf(String format, Object... args): Ghi chuỗi được định dạng theo format vào luồng, tương tự như System.out.printf().
+format(String format, Object... args): Tương tự như printf().
+write():
+
+write(int c): Ghi một ký tự vào luồng.
+write(char[] buf): Ghi một mảng ký tự vào luồng.
+write(String s): Ghi một chuỗi vào luồng.
+write(char[] buf, int off, int len): Ghi một phần của mảng ký tự vào luồng.
+flush():
+
+flush(): Đẩy tất cả dữ liệu đã được ghi từ bộ đệm xuống luồng.
+close():
+
+close(): Đóng luồng và giải phóng bất kỳ tài nguyên hệ thống nào được liên kết với nó.
+checkError():
+
+checkError(): Kiểm tra xem có lỗi nào xuất hiện trong quá trình ghi không.
+append():
+
+append(char c): Ghi một ký tự vào luồng và trả về chính đối tượng PrintWriter.
+append(CharSequence csq): Ghi một đối tượng CharSequence (bao gồm String) vào luồng.
+append(CharSequence csq, int start, int end): Ghi một phần của đối tượng CharSequence vào luồng.

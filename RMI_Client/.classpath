@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-20">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="client"/>
+	<classpathentry kind="lib" path="A:/workspace_all_tools/eclipse_space/LTM/istudent.jar"/>
+	<classpathentry kind="lib" path="serverJar.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

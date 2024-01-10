@@ -1,0 +1,40 @@
+---Trong Java, thư viện java.net cung cấp các lớp để làm việc với các kết nối mạng. 
+TCP
+Socket là một trong những thành phần quan trọng của thư viện này, 
+được sử dụng để thiết lập kết nối giữa hai máy tính thông qua mạng. 
+
+--*Trong lớp java.net.ServerSocket (được sử dụng cho máy chủ):
+ServerSocket(int port): Tạo một đối tượng ServerSocket và liên kết nó với cổng được chỉ định.
+
+Socket accept(): Chấp nhận một yêu cầu kết nối từ phía máy khách và trả về một đối tượng Socket 
+để truyền dữ liệu với máy khách.
+
+void close(): Đóng ServerSocket và giải phóng tất cả các tài nguyên liên quan.
+
+--*Trong lớp java.net.Socket (được sử dụng cho máy khách):
+Socket(String host, int port): Tạo một đối tượng Socket và kết nối nó đến máy chủ được chỉ định và cổng.
+
+InputStream getInputStream(): Trả về một luồng đầu vào để đọc dữ liệu từ máy chủ.
+
+OutputStream getOutputStream(): Trả về một luồng đầu ra để gửi dữ liệu đến máy chủ.
+
+void close(): Đóng Socket và giải phóng tất cả các tài nguyên liên quan.
+
+--3 steps in TCP Socket Programming:
+◼ 1. Step: Connection establishment
+◼ 2. Step: Client / server communication according to
+protocol
+◼ 3. Step: Connection closing
+
+--A socket is a connection between two hosts. It can
+perform seven basic operations:
+Client: Socket()
+1) Connect to a remote machine
+2) Send data (request)
+3) Receive data (Response)
+4) Close a connection
+
+Server: ServerSocket()
+5) Bind to a port
+6) Listen for incoming data
+7) Accept connections from remote machines on the bound port
